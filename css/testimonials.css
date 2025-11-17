@@ -1,0 +1,136 @@
+.t-heading {
+    font-size: clamp(22px, 3vw, 45px);
+    color: var(--text-white);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+
+}
+
+.clouds-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+
+.t-form {
+    background: linear-gradient(0deg, rgba(50, 120, 152, 1) -80%, rgba(255, 255, 255, 1) 100%);
+    padding: 16px 64px;
+    border-radius: 100px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: var( --card-blue-shadow);
+
+    label {
+        font-weight: 600;
+    }
+
+    .t-rating {
+        border-bottom: 2px solid var(--text-black);
+    }
+
+    input,
+    textarea {
+        border: 1px solid var(--text-black);
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: none;
+        color: var(--text-black);
+    }
+
+    textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+    }
+
+    .t-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        >input {
+            fleX: 1;
+        }
+    }
+}
+
+.t-rating {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    /* flex-direction: row-reverse; */
+
+}
+
+.star {
+    height: 16px;
+    width: 16px;
+    background-image: url("../assets/star_yellow.svg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+}
+
+.star input {
+    display: none;
+}
+
+.star:has(input:checked)~.star,
+.star.black {
+    background-image: url("../assets/star_black.svg");
+}
+
+
+.nav-btn:hover+.nav-btn,
+.nav-btn:hover+.nav-btn+.nav-btn,
+.nav-btn:has(+ .nav-btn:hover),
+.nav-btn:has(+ .nav-btn + .nav-btn:hover) {
+    border-color: transparent;
+}
+
+.all-testimonials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+.testimonial{
+    background: linear-gradient(0deg, rgba(50, 120, 152, 1)-50%, rgba(255, 255, 255, 1) 50%);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px; 
+    box-shadow: var( --card-blue-shadow);
+    max-width: 300px;
+
+}
+.t-top-row{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--text-black);
+    gap: 32px;
+}
+.t-stars{
+    display: flex;
+    gap: 4px;
+}
+.t-review{
+    font-weight: 800;
+    text-align: center;
+}

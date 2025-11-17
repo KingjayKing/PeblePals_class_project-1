@@ -46,11 +46,12 @@ body {
     background-color: var(--blue-dark);
     color: var(--text-black);
 }
-.main-content{
+
+.main-content {
     flex: 1;
 }
 
-.main-header{
+.main-header {
     background-color: var(--cream);
     border-radius: 32px;
     display: flex;
@@ -58,4 +59,236 @@ body {
     align-items: center;
     padding: 32px;
     margin: 32px;
+    position: relative;
+}
+
+.nav-link {
+    font-size: var(--f-u-6);
+    font-weight: 800;
+    text-decoration: none;
+    color: var(--text-black);
+    border-bottom: 8px solid transparent;
+    margin-bottom: -8px;
+    transition: all 0.5s linear;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    border-bottom: 8px solid var(--text-black);
+}
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+
+.logo {
+    position: absolute;
+    left: 32px;
+    top: 16px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 915px) {
+    .main-header {
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100px;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+    }
+}
+
+/* FOOTER */
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 32px 128px;
+
+    background-image: url(../assets/footer_bg.png);
+    background-position: bottom;
+    background-size: cover;
+    min-height: 314px;
+    z-index: 1;
+
+    >.f-disclaimer {
+        font-weight: 800;
+        text-align: center;
+    }
+}
+
+.f-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 32px;
+    border-radius: 4px;
+    backdrop-filter: blur(32px);
+    color: var(--text-white);
+    width: 100%;
+}
+
+.f-card.main {
+    display: flex;
+    gap: 32px;
+}
+
+.f-card.secondary {
+    text-align: center;
+    padding: 4px 32px;
+    color: rgb(168, 168, 168);
+}
+
+.f-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: var(--f-d-2);
+
+    >.f-heading {
+        color: var(--yellow);
+        font-weight: 800;
+        border-bottom: 2px solid var(--yellow);
+    }
+
+    >.f-link {
+        color: var(--text-white);
+        text-decoration: none;
+    }
+
+    >.f-link:hover {
+        filter: brightness(0.7);
+    }
+}
+
+.f-contact-form {
+    margin-left: auto;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+
+    >.f-form-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        >input {
+            flex: 1;
+            background: none;
+            border: 1px solid var(--yellow);
+            color: var(--text-white);
+            padding: 4px 16px;
+            border-radius: 32px;
+        }
+    }
+
+    button {
+        color: var(--text-black);
+        background-color: var(--yellow);
+        border-radius: 32px;
+        border: none;
+        font-weight: 800;
+        padding: 4px 16px;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(0.8);
+        }
+
+    }
+
+    strong {
+        color: var(--yellow);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-footer {
+        padding: 32px 32px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .f-card.main {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .f-contact-form {
+        margin: 0;
+    }
+}
+
+
+/* Common UI */
+.cta {
+    font-size: var(--f-u-6);
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 800;
+    background-color: var(--text-black);
+    padding: 8px 16px;
+    border-radius: 32px;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        color: var(--yellow);
+    }
+}
+
+.clouds-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 600px;
+    background-color: red;
+    padding: 64px;
+    background: linear-gradient(180deg, rgba(103, 161, 188, 1) 0%, rgba(103, 161, 188, 0) 100%), #8FB7BF;
+}
+
+.cloud-l {
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+
+.cloud-m {
+    position: absolute;
+    left: 30%;
+    top: 0;
+    /* filter: blur(2px); */
+}
+
+.cloud-r {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    /* filter: blur(1px); */
+    filter: var(--card-blue-shadow);
+}
+
+.primary-btn {
+    background: linear-gradient(0deg, rgba(50, 120, 152, 1) 20%, rgba(255, 255, 255, 1) 200%);
+    padding: 4px 16px;
+    color: var(--text-white);
+    border-radius: 4px;
+    border: none;
+    font-weight: 800;
+    cursor: pointer;
+    text-shadow: var(--text-shadow);
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
 }
