@@ -1,35 +1,48 @@
-.testimonials-box{
+/* Container that holds all testimonials */
+.tesitmonials-box {
     position: relative;
     z-index: 2;
-
-    padding: 32px;
-
+ 
     display: flex;
-    gap: 32px;
-
     flex-wrap: wrap;
-    max-width: 800px;
-
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+ 
+    padding: 20px 0;
+    width: 80%;
 }
-
-.testimonial{
+ 
+/* Individual testimonial card */
+.testimonial {
     padding: 32px;
-    border-radius: 32px;
-
-    background: #ffffff;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(152, 222, 245, 1) 150%);
-    max-width: 350px;
+    border-radius: 60px;
+    max-width: 335px;
+ 
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(152, 222, 245, 1) 150%
+    );
+ 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-.t-rating-row{
+ 
+/* Row with stars + name */
+.t-rating-row {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
     align-items: center;
+    gap: 16px;
+ 
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--text-black);
 }
 
-.t-message{
-    font-weight: 600;
-    text-align: center;
+.t-form-input{
+
+}
+.t-bottom-row{
+    display: flex;
+    gap: 16px;
 }
