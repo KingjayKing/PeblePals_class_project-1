@@ -66,3 +66,13 @@
         text-wrap: nowrap;
     }
 }
+
+.star{
+    height: 16px;
+    width: 16px;
+    border: 1px solid red;
+
+    background-image: url(/assets/star_yellow.svg);
+}
+
+.star:has{}
